@@ -82,7 +82,7 @@ export class Main {
 		// Set up path defaults based on platform
 		this.platform = os.platform()
 		if (this.platform === 'win32') {
-			this.rootPath = 'C:/Program Files/Sonic Pi'
+			this.rootPath = 'C:/home/projects/sonic-pi/sonic-pi/'
 			this.rubyPath = this.rootPath + '/app/server/native/ruby/bin/ruby.exe'
 		} else if (this.platform === 'darwin') {
 			this.rootPath = '/Applications/Sonic Pi.app/Contents/Resources'
@@ -94,9 +94,9 @@ export class Main {
 		this.config = new Config()
 
 		// Override default root path if found in settings
-		if (this.config.sonicPiRootDirectory()) {
-			this.rootPath = this.config.sonicPiRootDirectory()
-		}
+		// if (this.config.sonicPiRootDirectory()) {
+		// 	this.rootPath = this.config.sonicPiRootDirectory()
+		// }
 
 		this.portsInitalized = new Promise((r) => (this.portsInitalizedResolver = r))
 
