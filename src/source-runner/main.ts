@@ -475,7 +475,7 @@ export class Main {
 
 	// This is the main part of launching Sonic Pi's backend
 	async startRubyServer(): Promise<void> {
-		let args: String[] = [this.daemonLauncherPath] // No need for launch args on the new daemon script
+		let args: String[] = [this.daemonLauncherPath, '--no-scsynth-inputs'] // No need for launch args on the new daemon script
 
 		return new Promise<void>((resolve, reject) => {
 			let ruby_server = child_process.spawn(this.rubyPath, args)
