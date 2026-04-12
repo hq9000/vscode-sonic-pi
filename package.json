@@ -101,7 +101,18 @@
 					"pi"
 				],
 				"configuration": "./language-configuration.json"
-			}
+			},
+      {
+        "id": "py-sonic-pi",
+        "aliases": [
+          "Python Sonic Pi",
+          "py-sonic-pi"
+        ],
+        "extensions": [
+          "live.py"
+        ],
+        "configuration": "./language-configuration-py-sonic-pi.json"
+      }
 		],
 		"commands": [
 			{
